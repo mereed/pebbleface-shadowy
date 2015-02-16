@@ -1,0 +1,156 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "mereed",
+    "longName": "shadowy",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/moon&stars.png",
+                "name": "IMAGE_MOON",
+                "type": "png"
+            },
+            {
+                "file": "images/shadowmenu.png",
+                "menuIcon": true,
+                "name": "IMAGE_MENU_ICON",
+                "type": "png"
+            },
+            {
+                "file": "images/shadow-blockout2.png",
+                "name": "IMAGE_BLOCKOUT2",
+                "type": "png"
+            },
+            {
+                "file": "images/mysunrays.png",
+                "name": "IMAGE_SUN",
+                "type": "png"
+            },
+            {
+                "file": "images/shadow-blockout.png",
+                "name": "IMAGE_BLOCKOUT",
+                "type": "png"
+            },
+            {
+                "file": "images/shadowmirrorcolon.png",
+                "name": "IMAGE_COLON2",
+                "type": "png"
+            },
+            {
+                "file": "images/shadowmirror9.png",
+                "name": "IMAGE_NUM_92",
+                "type": "png"
+            },
+            {
+                "file": "images/shadowmirror8.png",
+                "name": "IMAGE_NUM_82",
+                "type": "png"
+            },
+            {
+                "file": "images/shadowmirror7.png",
+                "name": "IMAGE_NUM_72",
+                "type": "png"
+            },
+            {
+                "file": "images/shadowmirror6.png",
+                "name": "IMAGE_NUM_62",
+                "type": "png"
+            },
+            {
+                "file": "images/shadowmirror5.png",
+                "name": "IMAGE_NUM_52",
+                "type": "png"
+            },
+            {
+                "file": "images/shadowmirror4.png",
+                "name": "IMAGE_NUM_42",
+                "type": "png"
+            },
+            {
+                "file": "images/shadowmirror3.png",
+                "name": "IMAGE_NUM_32",
+                "type": "png"
+            },
+            {
+                "file": "images/shadowmirror2.png",
+                "name": "IMAGE_NUM_22",
+                "type": "png"
+            },
+            {
+                "file": "images/shadowmirror1.png",
+                "name": "IMAGE_NUM_12",
+                "type": "png"
+            },
+            {
+                "file": "images/shadowmirror0.png",
+                "name": "IMAGE_NUM_02",
+                "type": "png"
+            },
+            {
+                "file": "images/shadow-colon.png",
+                "name": "IMAGE_COLON",
+                "type": "png"
+            },
+            {
+                "file": "images/shadow9.png",
+                "name": "IMAGE_NUM_9",
+                "type": "png"
+            },
+            {
+                "file": "images/shadow8.png",
+                "name": "IMAGE_NUM_8",
+                "type": "png"
+            },
+            {
+                "file": "images/shadow7.png",
+                "name": "IMAGE_NUM_7",
+                "type": "png"
+            },
+            {
+                "file": "images/shadow6.png",
+                "name": "IMAGE_NUM_6",
+                "type": "png"
+            },
+            {
+                "file": "images/shadow5.png",
+                "name": "IMAGE_NUM_5",
+                "type": "png"
+            },
+            {
+                "file": "images/shadow4.png",
+                "name": "IMAGE_NUM_4",
+                "type": "png"
+            },
+            {
+                "file": "images/shadow3.png",
+                "name": "IMAGE_NUM_3",
+                "type": "png"
+            },
+            {
+                "file": "images/shadow2.png",
+                "name": "IMAGE_NUM_2",
+                "type": "png"
+            },
+            {
+                "file": "images/shadow1.png",
+                "name": "IMAGE_NUM_1",
+                "type": "png"
+            },
+            {
+                "file": "images/shadow0.png",
+                "name": "IMAGE_NUM_0",
+                "type": "png"
+            }
+        ]
+    },
+    "shortName": "shadowy",
+    "uuid": "622f2b4e-24c4-414b-a84b-b949bb43175a",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
