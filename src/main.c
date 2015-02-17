@@ -92,50 +92,39 @@ static void update_hours(struct tm *tick_time) {
   set_container_image(&time_digits_images2[1], time_digits_layers2[1], BIG_DIGIT2_IMAGE_RESOURCE_IDS[display_hour%10], GPoint(27, 118));
 	
   if (!clock_is_24h_style()) {
+	  
+	 if (tick_time->tm_hour >= 18 || tick_time->tm_hour <= 6) {
+
+		  layer_set_hidden(inverter_layer_get_layer( CityInv ), false);
+ 	 	  layer_set_hidden(bitmap_layer_get_layer( sun_layer ), true);
+  		  layer_set_hidden(bitmap_layer_get_layer( moon_layer ), false);
+	}	  
+	    
     if (display_hour/10 == 0) {
+		
       layer_set_hidden(bitmap_layer_get_layer(time_digits_layers[0]), true);
-      layer_set_hidden(bitmap_layer_get_layer(time_digits_layers2[0]), true);
-    }
-    else {
-      layer_set_hidden(bitmap_layer_get_layer(time_digits_layers[0]), false);
+      layer_set_hidden(bitmap_layer_get_layer(time_digits_layers2[0]), true);	  
+
+	} else
+		
+	  layer_set_hidden(bitmap_layer_get_layer(time_digits_layers[0]), false);
       layer_set_hidden(bitmap_layer_get_layer(time_digits_layers2[0]), false);
-    }
-  }  
-}
-
-static void night (struct tm *tick_time) {
+    
+  }
 	
-	 unsigned short display_hour = get_display_hour(tick_time->tm_hour);
-
-	if (!clock_is_24h_style()) {
-
-	if (tick_time->tm_hour >= 18 || tick_time->tm_hour <= 6) {
-	  
-	  layer_set_hidden(inverter_layer_get_layer( CityInv ), false);
-  	  layer_set_hidden(bitmap_layer_get_layer( sun_layer ), true);
-  	  layer_set_hidden(bitmap_layer_get_layer( moon_layer ), false);
-
-  } else {
-	  
-	  layer_set_hidden(inverter_layer_get_layer( CityInv ), true);
-  	  layer_set_hidden(bitmap_layer_get_layer( sun_layer ), false);
-  	  layer_set_hidden(bitmap_layer_get_layer( moon_layer ), true);
-	  
-  }
-  }
   if (clock_is_24h_style()) {
-
+	
 	if (display_hour >= 18 || display_hour <= 6) {
+		
+		  layer_set_hidden(inverter_layer_get_layer( CityInv ), false);
+ 	 	  layer_set_hidden(bitmap_layer_get_layer( sun_layer ), true);
+  		  layer_set_hidden(bitmap_layer_get_layer( moon_layer ), false);
+	}
 	  
-	  layer_set_hidden(inverter_layer_get_layer( CityInv ), true);
-
-  } else {
-	  
-	  layer_set_hidden(inverter_layer_get_layer( CityInv ), false);
-
   }
-  }
+
 }
+
 
 static void update_minutes(struct tm *tick_time) {
   set_container_image(&time_digits_images[2], time_digits_layers[2], BIG_DIGIT_IMAGE_RESOURCE_IDS[tick_time->tm_min/10], GPoint(82, 88));
@@ -175,7 +164,6 @@ static void handle_tick(struct tm* tick_time, TimeUnits units_changed) {
 
   if (units_changed & HOUR_UNIT) {
     update_hours(tick_time);
-    night(tick_time);
   }
   if (units_changed & MINUTE_UNIT) {
     update_minutes(tick_time);
@@ -315,8 +303,8 @@ static void do_init(void) {
   layer_add_child(root_layer, bitmap_layer_get_layer(blockout2));   
   layer_set_hidden(bitmap_layer_get_layer( blockout2 ), true);	
 
-	// Add inverter layer
-    CityInv = inverter_layer_create(GRect(0, 0, 144, 168));
+  // Add inverter layer
+	CityInv = inverter_layer_create(GRect(0, 0, 144, 168));
     layer_add_child(root_layer, inverter_layer_get_layer(CityInv));
 	layer_set_hidden(inverter_layer_get_layer( CityInv ), true);
 	
